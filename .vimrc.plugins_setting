@@ -58,6 +58,9 @@ vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
 nnoremap <Leader>a :Tabularize /
 vnoremap <Leader>a :Tabularize /
 
+" tagbarのキーバインド
+nnoremap <silent> <leader>t :TagbarToggle<CR>
+
 " lightline.vimの設定
 let g:lightline = {
       \ 'colorscheme': 'wombat',
