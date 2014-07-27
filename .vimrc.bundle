@@ -66,6 +66,8 @@ NeoBundle 'https://github.com/ngmy/vim-rubocop.git'
 NeoBundle 'https://github.com/itchyny/lightline.vim.git'
 " nerdcommenter
 NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
+" tagbar
+NeoBundle 'https://github.com/majutsushi/tagbar.git'
 
 
 if neobundle#exists_not_installed_bundles()
