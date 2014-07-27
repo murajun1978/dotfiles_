@@ -50,6 +50,14 @@ let NERDSpaceDelims = 1
 nmap <C-o> <Plug>NERDCommenterToggle
 vmap <C-o> <Plug>NERDCommenterToggle
 
+" Tabularizeのキーバインド
+nnoremap <silent> <Leader>a= :Tabularize /=<CR>
+vnoremap <silent> <Leader>a= :Tabularize /=<CR>
+nnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
+vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
+nnoremap <Leader>a :Tabularize /
+vnoremap <Leader>a :Tabularize /
+
 " lightline.vimの設定
 let g:lightline = {
       \ 'colorscheme': 'wombat',
