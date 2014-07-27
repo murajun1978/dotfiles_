@@ -34,6 +34,24 @@ let g:yankround_max_history = 50  " やんくの履歴は50個まで
 set modifiable                    " バッファを変更可能にする
 nnoremap <Esc><Esc> :noh<CR>      " ESC+ESCで検索ハイライト解除
 
+" ウィンドウの操作キーマップ
+nnoremap s <Nop>
+nnoremap sn gt
+nnoremap sp gT
+nnoremap sr <C-w>r
+nnoremap s= <C-w>=
+nnoremap sw <C-w>w
+nnoremap so <C-w>_<C-w>|
+nnoremap sO <C-w>=
+nnoremap sN :<C-u>bn<CR>
+nnoremap sP :<C-u>bp<CR>
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sT :<C-u>Unite tab<CR>
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+nnoremap sq :<C-u>q<CR>
+nnoremap sQ :<C-u>bd<CR>
+
 command! Ev edit $MYVIMRC         " vimrcの編集
 command! Rv source $MYVIMRC       " vimrcの反映
 

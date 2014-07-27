@@ -61,6 +61,16 @@ vnoremap <Leader>a :Tabularize /
 " tagbarのキーバインド
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 
+" vim-submodeの設定
+call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+call submode#map('bufmove', 'n', '', '<', '<C-w><')
+call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+
 " lightline.vimの設定
 let g:lightline = {
       \ 'colorscheme': 'wombat',
