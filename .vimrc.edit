@@ -5,3 +5,6 @@
 imap <C-p>  <ESC>"*pa
 
 noremap , ,<Space>        " コンマ入力後にスペース追加
+
+" 保存時に行末スペースを削除する
+autocmd BufWritePre * :%s/\s\+$//ge
