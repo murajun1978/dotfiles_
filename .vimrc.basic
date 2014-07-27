@@ -1,0 +1,40 @@
+"-------------------------------------------------------------------------------
+" 基本設定 Basics
+"-------------------------------------------------------------------------------
+set encoding=utf-8              " エンコード
+let mapleader = ","             " キーマップリーダー
+set scrolloff=5                 " スクロール時の余白
+set textwidth=0                 " 折り返しない
+set nobackup                    " バックアップ取らない
+set autoread                    " 変更あれば読み直し
+set noswapfile                  " スワップファイルはいらない
+set hidden                      " 編集中でも他のファイルを開く
+set bs=start,indent,eol         " バックスペースでなんでも消す
+set vb t_vb=                    " ビープならさない
+set noerrorbells                " エラーメッセージの表示時にビープならさない
+set whichwrap=b,s,h,l,<,>,[,]   " カーソルが行頭、行末で止めない
+set showcmd                     " コマンドをステータス行に表示
+set showmode                    " 現在のモードを表示
+set viminfo='50,<1000,s100,\"50 " viminfoファイルの設定
+set modelines=0                 " モードラインを無効
+set notitle
+
+set clipboard+=unnamed          " OSのクリップボードを使用
+set clipboard=unnamed           " やんくをクリップボードへ
+
+" ターミナルでマウス使用可能に
+set mouse=a
+set guioptions+=a
+set ttymouse=xterm2
+
+" 改行時に入力された行の末尾に合わせて次の行のインデントを増減
+set smartindent
+
+let g:yankround_max_history = 50  " やんくの履歴は50個まで
+set modifiable                    " バッファを変更可能にする
+nnoremap <Esc><Esc> :noh<CR>      " ESC+ESCで検索ハイライト解除
+
+command! Ev edit $MYVIMRC         " vimrcの編集
+command! Rv source $MYVIMRC       " vimrcの反映
+
+filetype plugin on                " ファイルタイプ判定をon
