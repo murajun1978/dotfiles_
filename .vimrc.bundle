@@ -62,16 +62,18 @@ NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
 " Vim RuboCop     -> rubocopを実行
 NeoBundle 'https://github.com/ngmy/vim-rubocop.git'
-" nerdcommenter
+" nerdcommenter   -> コメント
 NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
-" tagbar
+" tagbar          -> タグバー
 NeoBundle 'https://github.com/majutsushi/tagbar.git'
 " vim-submode
 NeoBundle 'https://github.com/kana/vim-submode.git'
-" tabline
+" tabline         -> タブライン
 NeoBundle 'https://github.com/mkitt/tabline.vim.git'
-" vim-airline
+" vim-airline     -> vimのステータスライン
 NeoBundle 'https://github.com/bling/vim-airline.git'
+" vim-rspec       -> vimからRSpecを実行
+NeoBundle 'https://github.com/thoughtbot/vim-rspec.git'
 
 
 
