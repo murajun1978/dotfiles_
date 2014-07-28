@@ -91,3 +91,6 @@ let g:airline_theme='wombat'
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+
+" vim-rspecの実行コマンド
+let g:rspec_command = 'spring rspec'
