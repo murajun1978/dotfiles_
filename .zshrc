@@ -21,7 +21,4 @@ alias grd='guard --no-bundler-warning'
 alias -s rb=ruby
 
 # 環境変数path
-export PATH="/usr/local/bin:/usr/bin:$HOME/.rbenv/bin:$PATH"
-
-# rbenv
-eval "$(rbenv init - zsh)"
+export PATH="/usr/local/bin:/usr/bin:$PATH"
