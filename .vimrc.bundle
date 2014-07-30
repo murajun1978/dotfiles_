@@ -74,6 +74,8 @@ NeoBundle 'https://github.com/mkitt/tabline.vim.git'
 NeoBundle 'https://github.com/bling/vim-airline.git'
 " vim-rspec       -> vimからRSpecを実行
 NeoBundle 'https://github.com/thoughtbot/vim-rspec.git'
+" vim-rbenv
+NeoBundle 'https://github.com/tpope/vim-rbenv.git'
 
 
 
