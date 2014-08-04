@@ -59,7 +59,7 @@ nnoremap <Leader>a :Tabularize /
 vnoremap <Leader>a :Tabularize /
 
 " tagbarのキーバインド
-nnoremap <silent> <leader>t :TagbarToggle<CR>
+nnoremap <silent> <leader>d :TagbarToggle<CR>
 
 " vim-submodeの設定
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
