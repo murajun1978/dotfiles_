@@ -76,6 +76,8 @@ NeoBundle 'https://github.com/bling/vim-airline.git'
 NeoBundle 'https://github.com/thoughtbot/vim-rspec.git'
 " vim-rbenv
 NeoBundle 'https://github.com/tpope/vim-rbenv.git'
+" dispatch.vim
+NeoBundle 'https://github.com/tpope/vim-dispatch.git'
 
 
 
