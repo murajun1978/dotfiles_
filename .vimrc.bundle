@@ -78,6 +78,8 @@ NeoBundle 'https://github.com/thoughtbot/vim-rspec.git'
 NeoBundle 'https://github.com/tpope/vim-rbenv.git'
 " dispatch.vim
 NeoBundle 'https://github.com/tpope/vim-dispatch.git'
+" supertab
+NeoBundle 'https://github.com/ervandew/supertab.git'
 
 
 
