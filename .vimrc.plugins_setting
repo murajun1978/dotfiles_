@@ -61,6 +61,17 @@ vnoremap <Leader>a :Tabularize /
 " tagbarのキーバインド
 nnoremap <silent> <leader>d :TagbarToggle<CR>
 
+" vim-bundlerのキーバインド
+nnoremap <silent> <Leader>b :Dispatch bundle install<CR>
+
+" vim-rspecのキーバインド
+nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
+
+" vim-rspecの設定
+let g:rspec_command = "Dispatch spring rspec {spec}"
+
 " vim-submodeの設定
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
 call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
@@ -86,13 +97,6 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 let g:airline_theme='wombat'
-
-" vim-rspecのキーバインド
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-
-let g:rspec_command = "Dispatch rspec {spec}"
 
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
