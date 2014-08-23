@@ -10,7 +10,8 @@ if has('vim_starting')
 endif
 
 
-
+" presenting.vim
+NeoBundle 'https://github.com/sotte/presenting.vim.git'
 " vim-ruby
 NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 " vim-rails
