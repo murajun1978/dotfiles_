@@ -100,3 +100,10 @@ let g:airline_theme='wombat'
 
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" rubyjump
+nmap <silent> <Space> <plug>(rubyjump)
+
+" vim-easy-align
+vmap <Enter> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)

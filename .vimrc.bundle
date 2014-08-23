@@ -10,8 +10,6 @@ if has('vim_starting')
 endif
 
 
-" presenting.vim
-NeoBundle 'https://github.com/sotte/presenting.vim.git'
 " vim-ruby
 NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 " vim-rails
@@ -81,8 +79,12 @@ NeoBundle 'https://github.com/tpope/vim-rbenv.git'
 NeoBundle 'https://github.com/tpope/vim-dispatch.git'
 " supertab
 NeoBundle 'https://github.com/ervandew/supertab.git'
-
-
+" presenting.vim
+NeoBundle 'https://github.com/sotte/presenting.vim.git'
+" rubyjump
+NeoBundle 'https://github.com/xmisao/rubyjump.vim.git'
+" vim-easy-align
+NeoBundle 'https://github.com/junegunn/vim-easy-align.git'
 
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
