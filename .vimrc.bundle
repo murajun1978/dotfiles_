@@ -85,6 +85,8 @@ NeoBundle 'https://github.com/sotte/presenting.vim.git'
 NeoBundle 'https://github.com/xmisao/rubyjump.vim.git'
 " vim-easy-align
 NeoBundle 'https://github.com/junegunn/vim-easy-align.git'
+" indentLine
+NeoBundle 'https://github.com/Yggdroot/indentLine.git'
 
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .

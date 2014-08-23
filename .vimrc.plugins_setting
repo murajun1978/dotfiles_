@@ -107,3 +107,7 @@ nmap <silent> <Space> <plug>(rubyjump)
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
+
+" indentLine
+let g:indentLine_color_term = '214'
+let g:indentLine_color_gui  = '#cb4b16'
