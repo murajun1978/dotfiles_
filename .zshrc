@@ -20,5 +20,8 @@ alias gi='git-issue'
 alias grd='guard --no-bundler-warning'
 alias -s rb=ruby
 
+# 素のvimで起動する
+alias nvi="vim -u NONE --noplugin"""
+
 # 環境変数path
 #export PATH="/usr/local/bin:/usr/bin:$PATH"
