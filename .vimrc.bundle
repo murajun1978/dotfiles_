@@ -13,7 +13,7 @@ endif
 " vim-ruby
 NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 " vim-rails
-NeoBundle 'https://github.com/tpope/vim-rails.git'
+"NeoBundle 'https://github.com/tpope/vim-rails.git'
 " Unite.vim
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 " surround.vim    -> いろいろ囲む
