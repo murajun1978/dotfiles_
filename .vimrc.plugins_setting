@@ -122,3 +122,8 @@ nnoremap <silent> ,rr :<C-u>Unite rails/route<CR>
 nnoremap <silent> ,rh :<C-u>Unite rails/helper<CR>
 nnoremap <silent> ,rd :<C-u>Unite rails/db<CR>
 nnoremap <silent> ,rl :<C-u>Unite rails/lib<CR>
+
+" vim-surround
+" erb
+autocmd FileType eruby let b:surround_{char2nr('=')} = "<%= \r %>"
+autocmd FileType eruby let b:surround_{char2nr('-')} = "<% \r %>"
