@@ -114,5 +114,11 @@ let g:indentLine_color_gui  = '#cb4b16'
 
 " unite-rails
 nnoremap <silent> ,rm :<C-u>Unite rails/model<CR>
-nnoremap <silent> ,rc :<C-u>Unite rails/contoller<CR>
+nnoremap <silent> ,rc :<C-u>Unite rails/controller<CR>
 nnoremap <silent> ,rv :<C-u>Unite rails/view<CR>
+nnoremap <silent> ,rs :<C-u>Unite rails/stylesheet<CR>
+nnoremap <silent> ,rj :<C-u>Unite rails/javascript<CR>
+nnoremap <silent> ,rr :<C-u>Unite rails/route<CR>
+nnoremap <silent> ,rh :<C-u>Unite rails/helper<CR>
+nnoremap <silent> ,rd :<C-u>Unite rails/db<CR>
+nnoremap <silent> ,rl :<C-u>Unite rails/lib<CR>
