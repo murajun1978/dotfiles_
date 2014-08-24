@@ -127,3 +127,7 @@ nnoremap <silent> <Leader>rl :<C-u>Unite rails/lib<CR>
 " erb
 autocmd FileType eruby let b:surround_{char2nr('=')} = "<%= \r %>"
 autocmd FileType eruby let b:surround_{char2nr('-')} = "<% \r %>"
+
+" colorizer
+let g:colorizer_startup = 0
+nmap <silent> <Leader>c <Plug>Colorizer

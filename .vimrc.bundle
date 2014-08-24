@@ -89,6 +89,10 @@ NeoBundle 'https://github.com/junegunn/vim-easy-align.git'
 NeoBundle 'https://github.com/Yggdroot/indentLine.git'
 " unite-rails
 NeoBundle 'https://github.com/basyura/unite-rails.git'
+" colorizer
+NeoBundle 'https://github.com/lilydjwg/colorizer.git'
+
+
 
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
