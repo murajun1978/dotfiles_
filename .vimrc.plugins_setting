@@ -131,3 +131,9 @@ autocmd FileType eruby let b:surround_{char2nr('-')} = "<% \r %>"
 " colorizer
 let g:colorizer_startup = 0
 nmap <silent> <Leader>c <Plug>Colorizer
+
+" over-vim
+" 行全体
+nnoremap <silent> <Leader>e :OverCommandLine %s/<CR>
+" 指定行
+vnoremap <silent> <Leader>e :OverCommandLine s/<CR>
