@@ -137,3 +137,9 @@ nmap <silent> <Leader>c <Plug>Colorizer
 nnoremap <silent> <Leader>e :OverCommandLine %s/<CR>
 " 指定行
 vnoremap <silent> <Leader>e :OverCommandLine s/<CR>
+
+" xmpfilter
+nmap <buffer> <Space>xr <Plug>(xmpfilter-run)
+xmap <buffer> <Space>xr <Plug>(xmpfilter-run)
+nmap <buffer> <Space>xm <Plug>(xmpfilter-mark)
+xmap <buffer> <Space>xm <Plug>(xmpfilter-mark)

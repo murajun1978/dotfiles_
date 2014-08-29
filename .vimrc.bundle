@@ -91,6 +91,8 @@ NeoBundle 'https://github.com/Yggdroot/indentLine.git'
 NeoBundle 'https://github.com/basyura/unite-rails.git'
 " colorizer
 NeoBundle 'https://github.com/lilydjwg/colorizer.git'
+" vim-ruby-xmpfilter
+NeoBundle 'https://github.com/t9md/vim-ruby-xmpfilter.git'
 
 
 
