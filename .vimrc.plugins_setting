@@ -139,7 +139,7 @@ nnoremap <silent> <Leader>e :OverCommandLine %s/<CR>
 vnoremap <silent> <Leader>e :OverCommandLine s/<CR>
 
 " xmpfilter
-nmap <buffer> <Space>xr <Plug>(xmpfilter-run)
-xmap <buffer> <Space>xr <Plug>(xmpfilter-run)
-nmap <buffer> <Space>xm <Plug>(xmpfilter-mark)
-xmap <buffer> <Space>xm <Plug>(xmpfilter-mark)
+nmap <Leader>xr <Plug>(xmpfilter-run)
+xmap <Leader>xr <Plug>(xmpfilter-run)
+nmap <Leader>xm <Plug>(xmpfilter-mark)
+xmap <Leader>xm <Plug>(xmpfilter-mark)
