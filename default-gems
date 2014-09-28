@@ -1,0 +1,5 @@
+bundler
+pry
+pry-doc
+pry-byebug
+pry-stack_explorer
