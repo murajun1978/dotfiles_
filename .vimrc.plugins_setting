@@ -1,9 +1,6 @@
 "-------------------------------------------------------------------------------
 " プラグインごとの設定 Plugins
 "-------------------------------------------------------------------------------
-" やんくの履歴を表示する
-nnoremap <silent>y<C-p> :<C-u>CtrlPYankRound<CR>
-
 " nerdtreeのキーバインド
 nmap <silent> <C-e>      :NERDTreeToggle<CR>
 vmap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
@@ -16,16 +13,17 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeMouseMode=2
 
-" vimshellのキーバインド
-nnoremap <Leader>vs :VimShellPop<CR>
-
-" Uniteでのgrep設定
+" Unite検索
 let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
+" grep検索
 nnoremap <silent> <Leader>g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> <Leader>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+" カーソルの単語を検索
+nnoremap <silent> <Leader>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+" grep検索結果の再表示
 nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
+" 検索にagを使う
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
@@ -41,7 +39,7 @@ nmap <Leader>r :RuboCop<CR>
 
 " syntasticからrubocopを実行する設定
 let g:syntastic_mode_map = { 'mode': 'passive',
-               \ 'passive_filetypes': ['ruby'] }
+              \ 'passive_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 nnoremap <Leader>rb :SyntasticToggleMode<CR>
 
@@ -50,16 +48,8 @@ let NERDSpaceDelims = 1
 nmap <C-o> <Plug>NERDCommenterToggle
 vmap <C-o> <Plug>NERDCommenterToggle
 
-" Tabularizeのキーバインド
-nnoremap <silent> <Leader>a= :Tabularize /=<CR>
-vnoremap <silent> <Leader>a= :Tabularize /=<CR>
-nnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
-vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
-nnoremap <Leader>a :Tabularize /
-vnoremap <Leader>a :Tabularize /
-
 " tagbarのキーバインド
-nnoremap <silent> <leader>d :TagbarToggle<CR>
+"nnoremap <silent> <leader>d :TagbarToggle<CR>
 
 " vim-bundlerのキーバインド
 nnoremap <silent> <Leader>b :Dispatch bundle install<CR>
@@ -84,7 +74,7 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 
 " vim-airlineの設定
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+ let g:airline_symbols = {}
 endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = '⮀'
@@ -99,18 +89,11 @@ let g:airline_symbols.linenr = '⭡'
 let g:airline_theme='wombat'
 
 " supertab
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
-" rubyjump
-nmap <silent> <Space> <plug>(rubyjump)
+"let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
-
-" indentLine
-let g:indentLine_color_term = '214'
-let g:indentLine_color_gui  = '#cb4b16'
 
 " unite-rails
 nnoremap <silent> <Leader>rm :<C-u>Unite rails/model<CR>
@@ -127,10 +110,6 @@ nnoremap <silent> <Leader>rl :<C-u>Unite rails/lib<CR>
 " erb
 autocmd FileType eruby let b:surround_{char2nr('=')} = "<%= \r %>"
 autocmd FileType eruby let b:surround_{char2nr('-')} = "<% \r %>"
-
-" colorizer
-let g:colorizer_startup = 0
-nmap <silent> <Leader>c <Plug>Colorizer
 
 " over-vim
 " 行全体

@@ -1,106 +1,93 @@
 filetype plugin indent off
+
+if !1 | finish | endif
+
 if has('vim_starting')
-  let bundle_dir = '~/dotfiles/bundle'
-  if !isdirectory(bundle_dir.'/neobundle.vim')
-    call system( 'git clone https://github.com/Shougo/neobundle.vim.git '.bundle_dir.'/neobundle.vim')
-  endif
-
-  exe 'set runtimepath+='.bundle_dir.'/neobundle.vim'
-  call neobundle#rc(bundle_dir)
+  set nocompatible
+  set runtimepath+=~/dotfiles/bundle/neobundle.vim/
 endif
 
+call neobundle#begin(expand('~/dotfiles/bundle/'))
 
-" vim-ruby
-NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
-" vim-rails
-"NeoBundle 'https://github.com/tpope/vim-rails.git'
-" Unite.vim
-NeoBundle 'https://github.com/Shougo/unite.vim.git'
-" surround.vim    -> いろいろ囲む
-NeoBundle 'https://github.com/tpope/vim-surround.git'
-" vim-smartinput  -> かっことか自動で閉じる
-NeoBundle 'https://github.com/kana/vim-smartinput.git'
-" endwise.vim     -> endとかの自動補完
-NeoBundle 'https://github.com/tpope/vim-endwise.git'
-" fugitive.vim    -> vimでのgit操作
-NeoBundle 'https://github.com/tpope/vim-fugitive.git'
-" YankRound.vim   -> やんくの履歴をとる
-NeoBundle 'https://github.com/LeafCage/yankround.vim.git'
-" ctrlp.vim       -> 多機能セレクタ
-NeoBundle 'https://github.com/kien/ctrlp.vim.git'
-" ag.vim          -> grep用
-NeoBundle 'https://github.com/rking/ag.vim.git'
-" move            -> 行選択して上下に移動
-NeoBundle 'https://github.com/matze/vim-move.git'
-" Emmet-vim       -> htmlタグ生成
-NeoBundle 'https://github.com/mattn/emmet-vim.git'
-" over.vim        -> 文字検索+置換
-NeoBundle 'https://github.com/osyo-manga/vim-over.git'
-" syntastic       -> 構文エラーをチェック
-NeoBundle 'https://github.com/scrooloose/syntastic.git'
-" repeat.vim      -> 指定の操作を繰り返す
-NeoBundle 'https://github.com/tpope/vim-repeat.git'
-" Tabular         -> テキストの整形
-NeoBundle 'https://github.com/godlygeek/tabular.git'
-" bundler.vim     -> bundlerの実行
-NeoBundle 'https://github.com/tpope/vim-bundler.git'
-" VimShell        -> vimからshell実行
-NeoBundle 'https://github.com/Shougo/vimshell.vim.git'
-" vimproc
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-" nerd-tree       -> ディレクトリツリー表示
-NeoBundle 'https://github.com/scrooloose/nerdtree.git'
-" vim-ref         -> リファレンス参照
-NeoBundle 'https://github.com/thinca/vim-ref.git'
-" Vim RuboCop     -> rubocopを実行
-NeoBundle 'https://github.com/ngmy/vim-rubocop.git'
-" nerdcommenter   -> コメント
-NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
-" tagbar          -> タグバー
-NeoBundle 'https://github.com/majutsushi/tagbar.git'
-" vim-submode
-NeoBundle 'https://github.com/kana/vim-submode.git'
-" tabline         -> タブライン
-NeoBundle 'https://github.com/mkitt/tabline.vim.git'
-" vim-airline     -> vimのステータスライン
-NeoBundle 'https://github.com/bling/vim-airline.git'
-" vim-rspec       -> vimからRSpecを実行
-NeoBundle 'https://github.com/thoughtbot/vim-rspec.git'
-" vim-rbenv
-NeoBundle 'https://github.com/tpope/vim-rbenv.git'
-" dispatch.vim
-NeoBundle 'https://github.com/tpope/vim-dispatch.git'
-" supertab
-NeoBundle 'https://github.com/ervandew/supertab.git'
-" presenting.vim
-NeoBundle 'https://github.com/sotte/presenting.vim.git'
-" rubyjump
-NeoBundle 'https://github.com/xmisao/rubyjump.vim.git'
-" vim-easy-align
-NeoBundle 'https://github.com/junegunn/vim-easy-align.git'
-" indentLine
-NeoBundle 'https://github.com/Yggdroot/indentLine.git'
-" unite-rails
-NeoBundle 'https://github.com/basyura/unite-rails.git'
-" colorizer
-NeoBundle 'https://github.com/lilydjwg/colorizer.git'
-" vim-ruby-xmpfilter
-NeoBundle 'https://github.com/t9md/vim-ruby-xmpfilter.git'
+NeoBundleFetch  'https://github.com/Shougo/neobundle.vim.git'
+NeoBundle       'https://github.com/Shougo/unite.vim.git'
 
+" nerdtree      ツリー表示
+NeoBundle       'https://github.com/scrooloose/nerdtree.git'
 
+" unite-rails   モデルとか指定してファイル検索
+NeoBundle       'https://github.com/basyura/unite-rails.git'
 
-if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-  \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Install Plugins'
-  NeoBundleInstall
-endif
+" ctrlp         多機能セレクタ
+NeoBundle       'https://github.com/kien/ctrlp.vim.git'
+
+" vim-airline   ステータスライン
+NeoBundle       'https://github.com/bling/vim-airline.git'
+
+" vim-endwise   endとかの自動補完
+NeoBundle       'https://github.com/tpope/vim-endwise.git'
+
+" smartinput    括弧とかとじてくれる
+NeoBundle       'https://github.com/kana/vim-smartinput.git'
+
+" vim-surround  なんでも囲む
+NeoBundle       'https://github.com/tpope/vim-surround.git'
+
+" vim-fugitive  vimからgit操作
+NeoBundle       'https://github.com/tpope/vim-fugitive.git'
+
+" vim-move      選択行を移動
+NeoBundle       'https://github.com/matze/vim-move.git'
+
+" emmet-vim     htmlやcssの入力を簡略化
+NeoBundle       'https://github.com/mattn/emmet-vim.git'
+
+" vim-bundle    vimからbundle実行
+NeoBundle       'https://github.com/tpope/vim-bundler.git'
+
+" easy-align    簡単に文字を整列
+NeoBundle       'https://github.com/junegunn/vim-easy-align.git'
+
+" vim-over      文字列置換
+NeoBundle       'https://github.com/osyo-manga/vim-over.git'
+
+" xmpfilter     Rubyを実行
+NeoBundle       'https://github.com/t9md/vim-ruby-xmpfilter.git'
+
+" vim-rspec     vimからrspecを実行
+NeoBundle       'https://github.com/thoughtbot/vim-rspec.git'
+
+" vim-rubocop   vimからrubocopを実行
+NeoBundle       'https://github.com/ngmy/vim-rubocop.git'
+
+" vim-rbenv     vimでrbenvを使う
+NeoBundle       'https://github.com/tpope/vim-rbenv.git'
+
+" nerdcommenter まとめてコメント
+NeoBundle       'https://github.com/scrooloose/nerdcommenter.git'
+
+" vim-dispatch  headlessで処理実行
+NeoBundle       'https://github.com/tpope/vim-dispatch.git'
+
+" vim-submode   vimでサブモード
+NeoBundle       'https://github.com/kana/vim-submode.git'
+
+" syntastic     構文チェック
+NeoBundle       'https://github.com/scrooloose/syntastic.git'
+
+" vimproc       非同期処理
+NeoBundle       'https://github.com/Shougo/vimproc.vim.git', {
+                    \ 'build' : {
+                    \     'windows' : 'tools\\update-dll-mingw',
+                    \     'cygwin' : 'make -f make_cygwin.mak',
+                    \     'mac' : 'make -f make_mac.mak',
+                    \     'linux' : 'make',
+                    \     'unix' : 'gmake',
+                    \    },
+                    \ }
+
+call neobundle#end()
 
 filetype plugin indent on
+
+NeoBundleCheck
