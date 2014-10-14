@@ -1,5 +1,7 @@
 bundle
+rubygems-update
 pry
 pry-doc
 pry-byebug
 pry-stack_explorer
+rubocop
